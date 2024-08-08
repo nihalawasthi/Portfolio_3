@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nihal Awasthi</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <script src="script.js"></script>
+  <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -18,62 +20,48 @@
       <div class="loader"></div>
     </div>
   </div>
+  <div>
+    <video autoplay muted loop class="bg">
+      <source src="{{ url_for('static', filename='public/bg.webm') }}" type="video/webm">
+    </video>
+    <video autoplay muted loop class="bg-after">
+      <source src="{{ url_for('static', filename='public/bg.webm') }}" type="video/webm">
+    </video>
+  </div>
 
-  <div class="parallax__group hero-container">
-    <div class="hero-text">
-      <h2 class="logo">
-        <button class="button" data-text="Awesome">
-          <span class="actual-text">&nbsp;Nihal&nbsp;</span>
-          <span aria-hidden="true" class="hover-text">&nbsp;Nihal&nbsp;</span>
-        </button>
-      </h2>
-      <ul>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Projects">Projects</a></li>
-        <li><a href="#Contact" class="btn">Contact</a></li>
+  <canvas></canvas>
+  <div class="content">
+    <h2 class="logo">
+      <button class="button">
+        <span class="actual-text">&nbsp;Nihal&nbsp;</span>
+        <span aria-hidden="true" class="hover-text">&nbsp;Nihal&nbsp;</span>
+      </button>
+    </h2>
+
+    <nav class="container">
+      <ul class="menu">
+        <li><a href="/"><i class="fa fa-home icons" aria-hidden="true"></i></a></li>
+        <li><a href="/about"><i class="fa fa-user-o icons" aria-hidden="true"></i></a></li>
+        <li><a href="/project"><i class="fa fa-cog icons" aria-hidden="true"></i></a></li>
       </ul>
-      <div class="social-container">
-        <a href="https://github.com/nihalawasthi" target="_blank"><i class="icon ion-logo-github"></i></a>
-        <a href="https://www.instagram.com/_._akash_22/" target="_blank"><i class="icon ion-logo-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/nihal-awasthi-16a644251/" target="_blank"><i
-            class="icon ion-logo-linkedin"></i></a>
+    </nav>
+
+
+      <div class="socials">
+        <a href="https://github.com/nihalawasthi">
+          <i class="fa fa-github icon" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/_._akash_22/">
+          <i class="fa fa-instagram icon" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/nihal-awasthi-16a644251">
+          <i class="fa fa-linkedin icon" aria-hidden="true"></i>
+        </a>
       </div>
 
-      <div id="container" class="content">
-        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.2/build/spline-viewer.js"></script>
-        <spline-viewer id="particles"
-          url="https://prod.spline.design/lkOC1QoiZCRKt6ej/scene.splinecode"></spline-viewer>
-      </div>
-    </div>
-    <!--
-        <div id="About" class="cover">
-          <div class="cover__content">
-            <h2>What is Phablet?</h2>
-            <p>The Phablet encryption algorithm is an intricate and robust multi-layered
-              encryption scheme designed to safeguard plaintext data. It encompasses a series of
-              sequential steps, integrating various sophisticated cryptographic techniques such as
-              substitution-permutation networks (SPNs)</p>
-            <a href="Hash/">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Give it a Try
-            </a>
-          </div>
-        </div>-->
+
   </div>
-  </div>
-  <div class="parallax__group info-container">
-    <img src="./img/concert.jpg" alt="Lively and colourful concert" />
-    <div class="text-container">
-      <h2>This is your year.</h2>
-      <p>What would life be if we had no courage to attempt anything?</p>
-      <p>- Vincent Van Gogh</p>
-      <a href="#" class="btn">Get Started Now</a>
-    </div>
-  </div>
-  </div>
+  <script src="{{ url_for('static', filename='cursor.js') }}"></script>
 </body>
 
 </html>
