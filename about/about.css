@@ -1,0 +1,64 @@
+.tags .container {
+    width: 100%;
+    height: 90%;
+    margin: 5% auto;
+}
+.terminal-container {
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    background: #000;
+    border: 0.5px solid #ccc;
+    border-radius: 7px;
+}
+
+.terminal-header {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px 5px 0 0;
+}
+
+.buttons {
+    grid-column-gap: 1px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.buttons .btn {
+    float: left;
+    margin-left: 7px;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+}
+
+
+.terminal-content {
+    width: 90%;
+    height: 80%;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 20px;
+    line-height: 1;
+    text-align: left;
+    color: #585353;
+    background: #000;
+    border: none;
+    padding: 15px;
+    resize: none;
+    outline: none;
+    overflow-y: auto;
+}
+
+span {
+    color: #ffffff;
+}
+
+.red {
+    background: red;
+}
+.green {
+    background: green;
+}
+.yellow {
+    background: yellow;
+}
