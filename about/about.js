@@ -18,16 +18,15 @@ const terminal = document.getElementById('terminal');
 
                 switch (command.toLowerCase()) {
                     case 'cd ..':
-                        output = '$ <span><a href="../">home</a></span>';
+                        window.open("../");
+                        //output = '$ <span><a target="__blank__" href="../">home</a></span>';
                         break;
-                    case 'cd Projects':
-                        output = '$ <span><a href="../project">Projects</a></span>';
+                    case 'cd projects':
+                        window.open("../project");
+                        //output = '$ <span><a href="../project">Projects</a></span>';
                         break;
                     case 'experience':
-                        output = '$ <span><a href="https://www.linkedin.com/in/nihal-awasthi-16a644251">Experience</a></span>';
-                        break;
-                    case 'experience':
-                        output = '$ <span><a href="https://www.linkedin.com/in/nihal-awasthi-16a644251">Experience</a></span>';
+                        window.open("https://www.linkedin.com/in/nihal-awasthi-16a644251");
                         break;
                     case 'contact':
                         output = '$ <span>Reach me at: nihalawasthi498@gmail.com or visit my <a href="https://www.linkedin.com/in/nihal-awasthi-16a644251">LinkedIn profile.</a></span>';
@@ -48,11 +47,11 @@ const terminal = document.getElementById('terminal');
                         output = '$ <span>Nihal Awasthi</span>';
                         break;
                     case 'clear':
-                        terminal.innerHTML = '<p>(userNyx)-[~] $ <span class="input" contenteditable="true"></span></p>';
+                        terminal.innerHTML = '<p>(user㉿Nyx)-[~] $ <span class="input" contenteditable="true"></span></p>';
                         terminal.querySelector('.input').focus();
                         return;
                     case 'exit':
-                        terminal.innerHTML = '<p>(userNyx)-[~] $ <span class="input" contenteditable="true"></span></p>';
+                        terminal.innerHTML = '<p>(user㉿Nyx)-[~] $ <span class="input" contenteditable="true"></span></p>';
                         terminal.querySelector('.input').focus();
                         return;
                     default:
@@ -60,7 +59,7 @@ const terminal = document.getElementById('terminal');
                 }
 
                 const commandLine = document.createElement('p');
-                commandLine.innerHTML = `(userNyx)-[~] $ <span>${command}</span>`;
+                commandLine.innerHTML = `(user㉿Nyx)-[~] $ <span>${command}</span>`;
                 terminal.insertBefore(commandLine, input.parentElement);
 
                 if (output) {

@@ -48,7 +48,10 @@
     outline: none;
     overflow-y: auto;
 }
-
+.terminal-content a{
+    color: blue;
+    cursor: pointer;
+}
 span {
     color: #ffffff;
 }
